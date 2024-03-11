@@ -1,0 +1,47 @@
+
+package wsdl;
+
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlType;
+
+
+/**
+ * 
+ * 
+ * <p>Java class for getClassificatorEnum</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * <pre>{@code
+ * <simpleType name="getClassificatorEnum">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="API_ERROR"/>
+ *     <enumeration value="OK"/>
+ *     <enumeration value="INVALID_CLASSIFICATOR"/>
+ *     <enumeration value="INVALID_PATH"/>
+ *     <enumeration value="INVALID_POSITION"/>
+ *     <enumeration value="SERVICE_DISABLED"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
+ * 
+ */
+@XmlType(name = "getClassificatorEnum")
+@XmlEnum
+public enum GetClassificatorEnum {
+
+    API_ERROR,
+    OK,
+    INVALID_CLASSIFICATOR,
+    INVALID_PATH,
+    INVALID_POSITION,
+    SERVICE_DISABLED;
+
+    public String value() {
+        return name();
+    }
+
+    public static GetClassificatorEnum fromValue(String v) {
+        return valueOf(v);
+    }
+
+}
